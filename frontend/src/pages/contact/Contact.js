@@ -67,7 +67,7 @@ const Contact = () => {
               </span>
               <span>
                 <FaEnvelope />
-                <p>rhemaemmanuelsupport@gmail.com</p>
+                <p>emmarhema20000@gmail.com</p>
               </span>                     
             </div>
           </Card>

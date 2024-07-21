@@ -5,21 +5,21 @@
   --header-height: 45px;
 
   --font-family: "Poppins", sans-serif;
-  --dark-blue: #0a1930;
-  --light-blue: #1f93ff;
+  --dark-blue: white;
+  --light-blue: #155796;
 
-  --color-white: #fff;
+  --color-white: #120219;
   --color-dark: #333;
 
-  --color-grey: #eee;
+  --color-grey: #03275c;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
-  --color-purple: #9d0191;
+  --color-purple: #130a3a;
   --color-orange: #ff7722;
 
-  --color-primary: #007bff;
-  --color-success: #28a745;
-  --color-danger: orangered;
+  --color-primary: #110e35;
+  --color-success: #435748;
+  --color-danger: rgb(92, 49, 33);
 }
 
 * {
@@ -35,7 +35,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background: #eee;
+  background: white;
 }
 
 section {
@@ -44,9 +44,12 @@ section {
 }
 
 .container {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
   padding: 0 20px;
+}
+.--hello{
+  color:#260336;
 }
 
 .--pad {
@@ -183,9 +186,11 @@ p {
 
 .--fw-bold {
   font-weight: 600;
+  color: rgb(0, 0, 0);
 }
 .--fw-thin {
   font-weight: 200;
+  color: rgb(0, 0, 0);
 }
 
 /* Text Color */
@@ -239,6 +244,7 @@ p {
 }
 .--mt {
   margin-top: 1rem;
+  color: black;
 }
 
 .--my {
@@ -319,7 +325,7 @@ p {
 
 .--btn-primary {
   color: #fff;
-  background: #007bff;
+  background: #123fd4;
 }
 .--btn-secondary {
   color: #fff;

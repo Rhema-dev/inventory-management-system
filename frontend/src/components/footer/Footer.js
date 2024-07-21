@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="--flex-center --py2">
-      <p>Rhema Emmanuel-Great Oshiokhua SE Group B. &copy; 2024</p>
+      <p>Designed by group 86 &copy; 2024</p>
     </div>
   );
 };

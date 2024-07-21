@@ -60,20 +60,20 @@ const ProductDetail = () => {
               <span className="badge">Name: </span> &nbsp; {product.name}
             </h4>
             <p>
-              <b>&rarr; SKU : </b> {product.sku}
+              <b>&rarr; <p className="sidetext">SKU :</p> </b> {product.sku}
             </p>
             <p>
-              <b>&rarr; Category : </b> {product.category}
+              <b>&rarr; <p className="sidetext">Category : </p></b> {product.category}
             </p>
             <p>
-              <b>&rarr; Price : </b> {"$"}
+              <b>&rarr; <p className="sidetext">Price : </p></b> {"$"}
               {product.price}
             </p>
             <p>
-              <b>&rarr; Quantity in stock : </b> {product.quantity}
+              <b>&rarr; <p className="sidetext">Quantity in stock :</p> </b> {product.quantity}
             </p>
             <p>
-              <b>&rarr; Total Value in stock : </b> {"$"}
+              <b>&rarr; <p className="sidetext">Total Value in stock : </p></b> {"$"}
               {product.price * product.quantity}
             </p>
             <hr />

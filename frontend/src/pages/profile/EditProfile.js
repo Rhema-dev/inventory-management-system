@@ -63,7 +63,15 @@ const EditProfile = () => {
           { method: "post", body: image }
         );
         const imgData = await response.json();
-        imageURL = imgData.url.toString();
+        console.log(imgData);
+
+        if (imgData && imgData.url) {
+          imageURL = imgData.url.toString();
+        } else {
+          throw new Error("Invalid image data received from Cloudinary");
+        }
+        
+
 
         // Save Profile
         const formData = {

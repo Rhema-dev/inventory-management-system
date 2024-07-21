@@ -1,44 +1,55 @@
 .layout {
   display: flex;
 }
+
 main {
   width: 100%;
-  // padding: 20px;
+  /* padding: 20px; */
   color: #ccc;
 }
+
 .sidebar {
+  border-right-style: solid;
+  border-width: 2px;
+  border-right-color: #260336;
   position: fixed;
   top: 0;
   left: 0;
   width: 230px;
   height: 100vh;
   flex-shrink: 0;
-  background-color: var(--color-white);
+  background-color: white;
   overflow: auto;
-  color: var(-color-dark);
+  color: var(--color-dark);
   transition: all 0.5s;
+  z-index: 1000; /* Ensure the sidebar remains above other content */
 }
 
 .top_section {
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  // border-bottom: 2px solid #ccc;
+  /* border-bottom: 2px solid #ccc; */
   transition: all 0.5s;
   background-color: var(--dark-blue);
   height: 70px;
 }
+
 .logo {
   font-size: 30px;
   color: var(--color-white);
 }
+
 .bars {
   display: flex;
   font-size: 25px;
-  margin-left: 70px;
+  margin-left: 90px;
+  margin-top: -10px;
   cursor: pointer;
   color: var(--color-white);
   transition: all 0.3s;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .bars:hover {
@@ -49,10 +60,12 @@ main {
 .sidebar-item {
   padding: 0.75em 1em;
   display: block;
-  // border-radius: 5px;
-  // border-bottom: 2px solid #ccc;
+  /* border-radius: 5px; */
+  /* border-bottom: 2px solid #ccc; */
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.15s;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .s-parent {
@@ -73,8 +86,8 @@ main {
 .sidebar-title span {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center; /* Align icons vertically */
+  gap: 12px; /* Add some space between icon and text */
   transition: all 0.5s;
   font-size: 1.6rem;
 }
@@ -83,8 +96,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.5em;
   font-size: 25px;
+  padding-right: 10px; /* Add padding to the right of the icon */
 }
 
 .sidebar-title .arrow-icon {
@@ -101,6 +114,7 @@ main {
   height: 0;
   overflow: hidden;
 }
+
 .sidebar-item.open > .sidebar-content {
   height: auto;
 }
@@ -116,7 +130,7 @@ main {
 }
 
 a {
-  color: var(--colo-dark);
+  color: var(--color-dark);
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -127,7 +141,8 @@ a {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #eee;
+  /* background-color: #eee; */
+  border-radius: 10px;
 }
 
 .active::after {
@@ -137,9 +152,20 @@ a {
   height: 100%;
   right: 0;
   top: 0;
-  background-color: var(--light-blue);
+  background-color: #260336;
 }
 
 .sublink .sidebar-item .sidebar-title {
   padding-left: 40px;
+}
+.closed .sidebar {
+  width: 100px; /* Adjust the width for the closed sidebar */
+}
+
+.closed .logo {
+  display: none; /* Hide the logo when the sidebar is closed */
+}
+
+.closed .bars {
+  margin-left: 10px; /* Adjust the margin for the bars icon when the sidebar is closed */
 }

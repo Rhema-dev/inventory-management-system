@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
 import { HiMenuAlt3 } from "react-icons/hi";
-//import { RiProductHuntLine } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
-
 import menu from "../../data/sidebar";
 import SidebarItem from "./SidebarItem";
 import { useNavigate } from "react-router-dom";
@@ -18,32 +16,23 @@ const Sidebar = ({ children }) => {
   };
 
   return (
-    <div className="layout">
-      <div className="sidebar" style={{ width: isOpen ? "230px" : "60px" }}>
+    <div className={`layout ${isOpen ? "open" : "closed"}`}>
+      <div className="sidebar">
         <div className="top_section">
-          <div className="logo" style={{ display: isOpen ? "block" : "none" }}>
-            <IoIosHome
-              size={35}
-              style={{ cursor: "pointer" }}
-              onClick={goHome}
-            />
+          <div className="logo" onClick={goHome}>
+            <IoIosHome size={35} style={{ cursor: "pointer" }} />
           </div>
-
-          <div
-            className="bars"
-            style={{ marginLeft: isOpen ? "100px" : "0px" }}
-          >
-            <HiMenuAlt3 onClick={toggle} />
+          <div className="bars" onClick={toggle}>
+            <HiMenuAlt3 />
           </div>
         </div>
-        {menu.map((item, index) => {
-          return <SidebarItem key={index} item={item} isOpen={isOpen} />;
-        })}
+        {menu.map((item, index) => (
+          <SidebarItem key={index} item={item} isOpen={isOpen} />
+        ))}
       </div>
-
       <main
         style={{
-          paddingLeft: isOpen ? "230px" : "60px",
+          paddingLeft: isOpen ? "230px" : "100px",
           transition: "all .5s",
         }}
       >
